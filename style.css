@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+    background-color: #030014;
+    color: #f3f4f6;
+    overflow-x: hidden;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+input,
+label,
+textarea,
+button,
+a {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+#portfolio-grid .project-item.group.opacity-0.scale-95 {
+    display: none;
+}
+
+/* Hide scrollbar during preloader */
+body.loading {
+    overflow: hidden;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-effect {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    z-index: 0;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.tab-btn.active {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.4);
+    color: #fff;
+}
+
+.filter-btn.active {
+    background-color: #6366f1;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
