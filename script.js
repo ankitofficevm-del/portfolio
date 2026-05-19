@@ -15,6 +15,36 @@ tailwind.config = {
     }
 }
 
+// Naye variables banane ki zaroorat nahi hai, hum direct DOM se pick karke laga rahe hain
+// Isse scoping aur initialization ka saara error hamesha ke liye khatam ho jayega.
+
+document.getElementById('menu-btn')?.addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.style.transform = 'translateX(0%)';
+        document.body.style.overflow = 'hidden'; // Background scroll band
+    }
+});
+
+document.getElementById('menu-close-btn')?.addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.style.transform = 'translateX(100%)';
+        document.body.style.overflow = ''; // Scroll wapas chalu
+    }
+});
+
+// Menu ke andar ki links par click hone par close karne ke liye
+document.querySelectorAll('.mobile-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) {
+            mobileMenu.style.transform = 'translateX(100%)';
+            document.body.style.overflow = '';
+        }
+    });
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Preloader & Core Animation Init Trigger
