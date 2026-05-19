@@ -60,3 +60,32 @@ body.loading {
     color: #fff;
     box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
 }
+
+nav.fixed a.flex.items-center {
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+@media(min-width: 768px) and (max-width: 999px) {
+
+nav.fixed a.nav-link {
+    margin-left: 10px !important;
+    font-size: 13px !important;
+}
+
+nav.fixed a.nav-link.home_link {
+    margin: 0px !important;
+}
+}
+
+@media(min-width: 1000px) and (max-width: 1100px) {
+
+nav.fixed a.nav-link {
+    margin-left: 15px !important;
+    font-size: 14px !important;
+}
+
+nav.fixed a.nav-link.home_link {
+    margin: 0px !important;
+}
+}
